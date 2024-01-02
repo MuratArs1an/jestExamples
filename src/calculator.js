@@ -32,6 +32,26 @@ const CalculationOperations = {
             result *= a;
         }
         return b < 0 ? 1 / result : result;
+    },
+
+    findfactorial: function(a){
+        let result=1;
+        for(let i=1; i<=a; i++){
+            result*=i;
+        }
+        return result;
+    },
+
+    findMod: function(a,b){
+        if(b===0){
+            return "Cannot divide by zero";
+        }
+        let result=a%b
+        return result;
+    },
+
+    converToBinary: function(a){
+        return a.toString(2);
     }
 
 }

@@ -93,10 +93,39 @@ test("exponentiation 1 to b times", () => {
     expect(exponentiation).toBe(1);
 });
 
+test("factorial 0 must be 1", () => {
+    // Call function to factorial
+    var factorial = CalculationOperations.findfactorial(0)
+    // assertion
+    expect(factorial).toBe(1);
+});
 
+test("find factorial a", () => {
+    // Call function to factorial
+    var factorial = CalculationOperations.findfactorial(5)
+    // assertion
+    expect(factorial).toBe(120);
+});
 
+test("find a number mod b", ()=>{
+    // Call function to mod
+    var mod=CalculationOperations.findMod(10,4)
+    // assertion
+    expect(mod).toBe(2);
+})
 
+test("find a number mod 0", ()=>{
+    // Call function to mod
+    var mod=CalculationOperations.findMod(5,0)
+    // assertion
+    expect(mod).toMatch("Cannot divide by zero");
+})
 
-
+test("convert number a to binary", ()=>{
+    // Call function to convert binary
+    var binary=CalculationOperations.converToBinary(12)
+    // assertion
+    expect(binary).toMatch("1100");
+})
 
 })
